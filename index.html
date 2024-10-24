@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amol Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Added */
+        }
+
+        body {
+            background-color: rgba(0, 255, 242, 0.216);
+            color: black;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            /* Added for smooth scrolling */
+        }
+
+        /* amols image for nav bar */
+        #png-nav {
+            height: 50px;
+            position: relative;
+            /* margin-left: 5px; */
+            right: 10px;
+            /* top: -10px; */
+
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 80px;
+            background-color: rgba(12, 81, 79, 0.216);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(45, 6, 201);
+            font-size: 1.05rem;
+
+        }
+
+        main hr {
+            border: 0;
+            background: rgb(45, 6, 201);
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Style for the hamburger button */
+        .hamburger {
+            display: none;
+            /* Hidden by default */
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+
+        /* first section */
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+
+
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2rem;
+
+        }
+
+        .leftsection .buttons {
+            padding: 50px 0;
+        }
+
+        .leftsection .btn {
+            padding: 12px;
+            background: wheat;
+            color: black;
+            border: 2px solid black;
+            border-radius: 10rem;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+
+
+        }
+
+        .leftsection .btn:hover {
+            background: transparent;
+            color: wheat;
+            box-shadow: none;
+        }
+
+
+
+        .rightsection img {
+            width: 90%;
+            margin: 25px;
+
+        }
+
+        .aqua {
+            color: rgba(7, 80, 225, 0.918);
+            ;
+        }
+
+        .text {
+            color: rgba(16, 47, 106, 0.918);
+        }
+
+        /* react css */
+
+        #element {
+            color: rgba(7, 80, 225, 0.918);
+        }
+
+        /* it ends hear */
+        /* second section css */
+        .secondsection {
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .secondsection .box {
+            background: rgba(7, 80, 225, 0.918);
+            /* width: 76vw; */
+
+            height: 2px;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+            /* Spaces out the columns evenly */
+            width: 100%;
+            /* Makes sure the width of the box spans the available space */
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: rgba(7, 80, 225, 0.918);
+            margin: 0 200px;
+        }
+
+        .image-top {
+            width: 50px;
+            position: relative;
+            top: -44px;
+            left: -9px;
+
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 5px;
+            /* width: 120px; */
+            font-size: 18px;
+            margin: 0;
+            padding: 1rem;
+            width: 10vw;
+
+
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 10px;
+            color: rgba(22, 15, 231, 0.918);
+            /* width: 20px; */
+            font-size: 13px;
+            margin: 0;
+            padding: 0.1rem;
+            width: 100%;
+        }
+
+        /* New box for each title and description */
+        .vertical-box {
+
+            border: 1px solid rgba(66, 97, 157, 0.8);
+            /* Box border */
+            padding: 30px;
+            /* Padding inside the box */
+            border-radius: 8px;
+            /* Rounded corners */
+            position: relative;
+            /* Positioned relative for hover */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition for hover effect */
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            /* Light shadow for the box */
+            background-color: rgb(4, 209, 168);
+            /* Light background inside the box */
+            cursor: pointer;
+            /* Pointer on hover */
+        }
+
+        /* Hover effect on the box */
+        .vertical-box:hover {
+
+            border-color: rgba(221, 111, 8, 0.958);
+            /* New color on hover */
+            transform: translateY(-35px);
+            /* Makes the box move up when hovered */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+            /* Increases shadow on hover */
+        }
+
+        .vertical {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0 20px;
+            /* Controls spacing between the columns */
+            padding: 0.2rem;
+            /* Adjust the padding for spacing inside the box */
+            background-color: rgba(4, 209, 168, 0);
+            /* Transparent background initially */
+            border-radius: 15px;
+            /* Keeps the rounded corners */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            /* width: auto; */
+            /* Adjust the width to fit the content */
+
+
+        }
+
+
+
+        .vertical:hover {
+            background-color: rgba(4, 209, 168, 0.5);
+            /* Change background color on hover */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            /* Box shadow effect */
+        }
+
+
+        /* third section css */
+        /*  */
+        /*  */
+        /*   */
+        /*  */
+        /*  */
+        .text-skills {
+            color: rgba(16, 47, 106, 0.918);
+        }
+
+        .third-section {
+            max-width: 80vw;
+            margin: auto;
+            height: 135vh;
+        }
+
+        .third-section h1 {
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-containers {
+
+            display: flex;
+            flex-direction: row;
+            /* Horizontal alignment of Frontend, Middleware, Backend */
+            gap: 2rem;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+            justify-content: space-between;
+            /* Ensure they are spaced evenly */
+            flex: 1;
+        }
+
+        .details-containers {
+            padding: 1.5rem;
+            flex: 1;
+            background: rgb(4, 209, 168);
+            border-radius: 2rem;
+            border: rgba(57, 81, 124, 0.918) 0.1rem solid;
+            border-color: rgba(182, 6, 6, 0.918);
+            text-align: center;
+            transition: border-color 0.5s ease, tranform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition for border color */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .details-containers:hover {
+            border-color: rgba(221, 111, 8, 0.958);
+            /* New color on hover */
+            transform: translateY(-2px);
+            /* <--- Added transform to move upwards */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+
+        }
+
+        .experience-details-container {
+
+            display: flex;
+            justify-content: space-between;
+            /* Added to space the sections */
+            align-items: flex-start;
+            flex-direction: row;
+            /* Changed to row for horizontal layout of main categories */
+            gap: 2rem;
+            /* Adds space between Frontend, Middleware, and Backend */
+            flex-wrap: wrap;
+            /* Allows items to wrap into the next line on smaller screens */
+        }
+
+        .article-container {
+            display: flex;
+            text-align: initial;
+            text-wrap: wrap;
+            flex-direction: column;
+            gap: 2.5rem;
+            justify-content: space-around;
+        }
+
+        article {
+
+            display: flex;
+            flex-direction: column;
+            /* Ensures each icon and description stack vertically */
+            align-items: center;
+            gap: 0.01rem;
+            padding: 0.01rem;
+            box-sizing: border-box;
+
+        }
+
+        article .icon {
+            cursor: default;
+            height: 3rem;
+
+        }
+
+
+
+        /* fourth section css */
+        /* ******************
+        ******************
+        ****************** */
+        .text-project {
+            color: rgba(16, 47, 106, 0.918);
+        }
+
+        .fourth-section {
+            max-width: 80vw;
+            margin: auto;
+            height: 100vh;
+        }
+
+        .fourth-section h1 {
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-project {
+            padding: 12px;
+            background: wheat;
+            color: black;
+            border: 2px solid black;
+            border-radius: 10rem;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.5s;
+            position: relative;
+            margin-left: 300px;
+
+
+
+
+        }
+
+        #btn-correction {
+            /* display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;*/
+            margin-right: 50px;
+            margin-left: 50px;
+            padding: 20px 0;
+        }
+
+        .btn-project:hover {
+            background: transparent;
+            color: rgba(97, 176, 120, 0.918);
+            box-shadow: none;
+        }
+
+        #projects {
+            position: relative;
+
+        }
+
+        .color-container {
+            background-color: rgb(163, 163, 163);
+            background: rgb(4, 209, 168);
+        }
+
+        .project-img {
+            border-radius: 2rem;
+            width: 100%;
+            height: 40%;
+            position: relative;
+            /* margin-left: 300px; */
+            max-width: 100%;
+            /* Ensures the image doesn't overflow its container */
+            height: auto;
+            /* Maintains the aspect ratio */
+
+        }
+
+        .project-title {
+
+            margin: 1rem;
+            color: black;
+            position: relative;
+
+        }
+
+
+        .project-btn {
+            color: black;
+            border-color: rgb(163, 163, 163);
+
+
+        }
+
+
+
+
+
+
+
+
+
+        /* fifth section css */
+        .text-contact {
+            color: rgba(16, 47, 106, 0.918);
+
+        }
+
+        .fifth-section {
+            max-width: 80vw;
+            margin: auto;
+            height: 40vh;
+
+
+        }
+
+
+        .fifth-section h1 {
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            /* margin-right: 100px; */
+
+
+        }
+
+        /* social media */
+        #socials-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+            gap: 1rem;
+
+        }
+
+        .icon {
+            cursor: pointer;
+            height: 2rem;
+            display: block;
+
+        }
+
+        #contacts {
+            display: flex;
+            justify-content: center;
+            border-radius: 2rem;
+            border: rgba(57, 81, 124, 0.918) 0.1rem solid;
+            border-color: rgba(182, 6, 6, 0.918);
+            background: rgb(4, 209, 168);
+            margin: 2rem auto;
+            padding: 0.5rem;
+            transition: border-color 0.5s ease, tranform 0.3s ease, box-shadow 0.3s ease;
+            /* Smooth transition for border color */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Change border color on hover */
+        #contacts:hover {
+            border-color: rgba(221, 111, 8, 0.958);
+            /* New color on hover */
+            transform: translateY(-2px);
+            /* <--- Added transform to move upwards */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+        #contacts-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+            margin: 1rem;
+            width: 44vw;
+            gap: 2rem;
+        }
+
+
+
+
+        #contacts-container p {
+            font-size: large;
+            margin: 0;
+        }
+
+        #contacts-container a {
+            text-decoration: none;
+            /* Remove underline by default */
+            color: inherit;
+            /* Keep text color the same as parent */
+        }
+
+        #contacts-container a:hover {
+            text-decoration: underline;
+            /* Add underline on hover */
+        }
+
+        .cont {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+
+
+
+
+        /* footer section css*/
+        footer {
+            background-color: rgba(10, 184, 194, 0.918);
+            padding: 20px 0;
+            /*Add padding for better spacing8 */
+
+        }
+
+        .footer {
+            display: flex;
+            padding: 25px 125px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* Allow items to wrap in smaller screens */
+            flex-direction: row; /* Default to row layout */
+        }
+
+        .footer-first {
+            font-size: 1.5em;
+            /* Increase font size for visibility */
+            font-weight: bold;
+            /* Make it bold for emphasis */
+            margin-bottom: 10px;
+            /* Add margin for spacing */
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+            /* Remove default padding */
+            margin: 0;
+            /* Remove default margin */
+        }
+
+        .footer li {
+            margin: 5px 0;
+            /* Add margin between list items */
+        }
+
+        .footer>div {
+            flex: 1; /* Allow flex items to grow */
+            width: 225px;
+            min-width: 200px; /* Ensure minimum width */
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        footer .footer a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+            /* Smooth transition for hover effect */
+        }
+
+        .footer a:hover {
+            color: rgba(255, 255, 255, 0.8);
+            /* Lighter color on hover */
+        }
+
+        .footer img.icon {
+            width: 40px;
+            /* Set a fixed width for icons */
+            height: 40px;
+            /* Set a fixed height for icons */
+            vertical-align: middle;
+            /* Align icons with text */
+            margin-right: 8px;
+            /* Add space between icon and text */
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+            font-size: 0.9em;
+            /* Slightly smaller font size */
+        }
+
+        .footer-third li {
+            display: flex;
+            /* Use flexbox to align items in a row */
+            align-items: center;
+            /* Center items vertically */
+            margin: 5px 0;
+            /* Add margin between list items */
+        }
+
+        .footer-third img.icon {
+            width: 30px;
+            /* Set a fixed width for the icon */
+            height: 30px;
+            /* Set a fixed height for the icon */
+            margin-right: 15px;
+            /* Space between icon and text */
+        }
+
+        .footer-third a {
+            color: white;
+            /* Ensure the link color matches the footer text */
+            text-decoration: none;
+            /* Remove underline from links */
+            transition: color 0.3s;
+            /* Add transition for hover effect */
+        }
+
+        .footer-third a:hover {
+            color: rgba(255, 255, 255, 0.8);
+            /* Lighter color on hover */
+        }
+
+        /* png phtos */
+        #skills-png {
+            height: 60px;
+            position: relative;
+            margin-left: 30px;
+            top: 5px;
+            /* top: -10px; */
+
+        }
+
+        #projects-png {
+            height: 60px;
+            position: relative;
+            margin-left: 30px;
+            top: 5px;
+            /* top: -10px; */
+
+        }
+
+        #contacts-png {
+            height: 60px;
+            position: relative;
+            margin-left: 30px;
+            top: 5px;
+            /* top: -10px; */
+
+        }
+
+        /* png for profile photo of amol */
+        #png {
+            height: 70px;
+            position: relative;
+            margin-left: 50px;
+            /* top: -10px; */
+
+        }
+
+
+
+        /* media queries for responsiveness */
+        nav {
+            position: relative;
+            /* Ensure the nav is positioned correctly */
+        }
+
+        .hamburger {
+            display: none;
+            /* Hide the hamburger by default */
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            height: 4px;
+            width: 30px;
+            background-color: #333;
+            /* Change as per your design */
+            margin: 3px 0;
+            /* Space between bars */
+        }
+
+        /* Show the hamburger on smaller screens */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+                /* Show the hamburger icon */
+            }
+
+            .nav-links {
+                display: none;
+                /* Hide the nav links initially */
+                flex-direction: column;
+                /* Stack links vertically */
+                position: absolute;
+                /* Position them absolutely */
+                background-color: white;
+                /* Change background as needed */
+                top: 50px;
+                /* Adjust based on your layout */
+                left: 0;
+                width: 100%;
+                /* Full width on mobile */
+            }
+
+            .nav-links.active {
+                display: flex;
+                /* Show nav links when active */
+            }
+
+            .nav-links li {
+                padding: 10px 20px;
+                /* Add padding to links */
+                text-align: center;
+                /* Center align links */
+            }
+        }
+
+        /* Mobile devices (max-width: 600px) */
+        @media screen and (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .firstsection>div {
+                width: 90%;
+            }
+
+            .rightsection img {
+                max-width: 100%;
+                /* Ensures images scale properly */
+                height: auto;
+                /* Maintains aspect ratio */
+            }
+
+            footer {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .footer {
+                flex-direction: column;
+            }
+
+            .footer ul {
+                padding: 0;
+            }
+
+            .btn-project {
+                margin-left: 0;
+                /* Center buttons on mobile */
+                width: 100%;
+                /* Full-width buttons */
+                margin-top: 10px;
+                /* Spacing between buttons */
+            }
+
+            .project-title {
+                font-size: 1.5rem;
+                /* Reduce title font size */
+                text-align: center;
+                /* Center align titles */
+            }
+
+            #contacts-container {
+                flex-direction: column;
+                /* Stack contact items */
+                align-items: center;
+            }
+
+            #contacts-container p {
+                text-align: center;
+                /* Center align text */
+            }
+        }
+
+        /* Tablets (min-width: 600px, max-width: 1024px) */
+        @media screen and (min-width: 600px) and (max-width: 1024px) {
+            .firstsection {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .firstsection>div {
+                width: 80%;
+            }
+
+            .rightsection img {
+                max-width: 70%;
+                /* Adjust image width for tablets */
+                height: auto;
+            }
+
+            .secondsection .box {
+                /* gap: 10px; */
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .vertical {
+                margin: 5px 0;
+                width: 100%; /* Set a width for vertical boxes */
+            }
+
+            .footer {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .btn-project {
+                width: auto;
+                /* Reset width to auto for buttons */
+                margin-top: 10px;
+                /* Spacing between buttons */
+            }
+        }
+
+        /* Desktops (min-width: 1025px) */
+        @media screen and (min-width: 1025px) {
+            .fourth-section {
+                height: auto;
+                /* Allow height to adjust based on content */
+            }
+
+            .fifth-section {
+                height: auto;
+                /* Allow height to adjust based on content */
+            }
+        }
+
+
+
+        /* media queries end hear */
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><img src="Amol.png" alt="" id="png-nav">Amol's Portfolio</div>
+            <div class="right">
+                <button class="hamburger" aria-label="Toggle navigation" id="hamburger">&#9776;</button>
+                <ul class="nav-list" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact me</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="firstsection">
+
+            <div class="leftsection">Hi, My Name is <span class="aqua">Amol Patil</span>
+                <div>and I am a Passionate</div>
+                <span id="element"></span> <!-- Element to contain animated typing -->
+                <div class="buttons">
+                    <button class="btn" onclick="window.open('./Amol Resume NEW.pdf')">Download Resume</button>
+
+
+                    <button class="btn" onclick="window.location.href='https://github.com/AMOL192002'">Visit
+                        Github</button>
+                </div>
+
+            </div>
+            </div>
+
+
+
+            <div class="rightsection">
+                <img src="my.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <!-- second section -->
+        <section id="about" class="secondsection">
+            <span class="text">What I Have Done So Far</span>
+            <!-- amol image -->
+            <h1> About Me <img src="Amol.png" alt="" id="png"> </h1>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="ec.png" alt="">
+                    <div class="vertical-box">
+                        <div class="vertical-title">
+                            B.E(ECE) {2020-2024}
+                        </div>
+                        <div class="vertical-desc">
+                            "Electronics and Communication Engineering graduate (2020-2024) from
+                            Jain
+                            College of Engineering. Proficient in circuit design and communication systems, now
+                            transitioning to pursue a career in Java Full Stack Development for software solutions."
+
+                        </div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="py.png" alt="">
+                    <div class="vertical-box">
+                        <div class="vertical-title">
+                            Python internship {aug 2023 to sep 2023}
+                        </div>
+                        <div class="vertical-desc">"Developed a Drowsiness Detection System using Python and machine
+                            learning. The project detects driver fatigue in real-time through eye-tracking and alerts,
+                            enhancing road safety."</div>
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="jsp.png" alt="">
+                    <div class="vertical-box">
+                        <div class="vertical-title">
+                            Java Full Stack Development Training {20-june-2024 to Present}
+                        </div>
+                        <div class="vertical-desc">"Getting Skilled in Java Full Stack Development from Jspiders with
+                            expertise in HTML, CSS,
+                            JavaScript, React, and Core Java. Proficient in JDBC, Hibernate, Servlets, and database
+                            technologies like SQL and PL/SQL. Adept at building dynamic, scalable, and efficient web
+                            applications."</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+        </section>
+        <br>
+        <br>
+        <!-- third section -->
+        <section id="services" class="third-section">
+            <span class="text-skills">Skills I Have</span>
+            <h1>Services I Provide <img src="skills.png" alt="" id="skills-png"></h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-containers">
+                        <h2 class="experience-sub-title">FRONTEND DEVELOPMENT</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="html.png" alt="" class="icon">
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+
+                            </article>
+                            <article>
+                                <img src="css.png" alt="" class="icon">
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+
+                            </article>
+                            <article>
+                                <img src="java_script.png" alt="" class="icon">
+                                <h3>JAVA SCRIPT</h3>
+                                <p>Intermediate</p>
+
+                            </article>
+                            <article>
+                                <img src="react_js.png" alt="" class="icon">
+                                <h3>REACT JS</h3>
+                                <p>Basic</p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+                    <div class="details-containers">
+                        <h2 class="experience-sub-title">MIDDLEWEAR DEVELOPMENT</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="java.png" alt="" class="icon">
+                                <h3>JAVA</h3>
+                                <p>Experienced</p>
+
+                            </article>
+                            <article>
+                                <img src="core_java.png" alt="" class="icon">
+                                <h3>COREJAVA</h3>
+                                <p>Experienced</p>
+
+                            </article>
+                            <article>
+                                <img src="jdbc.png" alt="" class="icon">
+                                <h3>JDBC</h3>
+                                <p>Experienced</p>
+
+                            </article>
+                            <article>
+                                <img src="hibernate.png" alt="" class="icon">
+                                <h3>HIBERNATE</h3>
+                                <p>Experienced</p>
+
+                            </article>
+                            <article>
+                                <img src="servlets.png" alt="" class="icon">
+                                <h3>SERVLETS</h3>
+                                <p>Experienced</p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+                    <div class="details-containers">
+                        <h2 class="experience-sub-title">BACKEND DEVELOPMENT</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="sql.png" alt="" class="icon">
+                                <h3>SQL</h3>
+                                <p>Experienced</p>
+
+                            </article>
+                            <article>
+                                <img src="plsql.png" alt="" class="icon">
+                                <h3>POSTGRE SQL</h3>
+                                <p>Intermediate</p>
+
+                            </article>
+                            <article>
+                                <img src="mysql.png" alt="" class="icon">
+                                <h3>MYSQL</h3>
+                                <p>BASIC</p>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- fourth section -->
+
+        <section id="projects" class="fourth-section">
+            <span class="text-project">What Projects I Have Done</span>
+            <h1>My Projects<img src="project.png" alt="" id="projects-png"></h1>
+            <br>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                    <div class="details-containers color-container">
+                        <div class="article-container">
+                            <img src="amazon logo.jpg" alt="Amazon_ui_clone" class="project-img">
+                            <div class="btn-container">
+                                <div id="btn-correction">
+                                    <button class="btn-project"
+                                        onclick="location.href='https://github.com/AMOL192002/-E-commerce-Web-Application-Amazon-Clone-using-HTML-CSS-' ">Github</button>
+                                    <button class="btn-project"
+                                        onclick="location.href='https://amol192002.github.io/-E-commerce-Web-Application-Amazon-Clone-using-HTML-CSS-/' ">Live
+                                        Demo</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <h2 class="experience-sub-title project-title">Project One(Amazon UI)</h2>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- fifth section -->
+        <section id="contact" class="fifth-section">
+            <span class="text-contact">Get In Touch</span>
+            <h1>Contact Me<img src="contact.png" alt="" id="contacts-png"></h1>
+            <!-- icons -->
+            <div id="contacts">
+                <div id="contacts-container">
+                    <div class="cont">
+                        <img src="ln.png" alt="my Linkedin profile" class="icon"
+                            onclick="location.href='https://linkedin.com/in/amol-patil-010a90224/'">
+                        <p><a href="https://linkedin.com/in/amol-patil-010a90224/">LinkedIn</a></p>
+                    </div>
+                    <div class="cont"> <img src="git.png" alt="my Linkedin profile" class="icon"
+                            onclick="location.href='https://github.com/AMOL192002/'">
+                        <p><a href="https://github.com/AMOL192002/">GitHub</a></p>
+                    </div>
+                    <div class="cont"> <img src="email.png" alt="my email profile" class="icon"
+                            onclick="location.href='https://mailto:amolpatil120029@gmail.com/'">
+                        <p><a href="https://mailto:amolpatil120029@gmail.com/">amolpatil120029@gmail.com</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+    </main>
+    <!-- footer section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-first">Amol's Developer Portfolio</div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="#home">Home</a> </li>
+                    <li><a href="#about">About</a> </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contacts">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>
+                        linkedin
+                        <img src="ln.png" alt="LinkedIn Profile" class="icon"
+                            onclick="location.href='https://linkedin.com/in/amol-patil-010a90224/'">:
+                        <a onclick="location.href='https://linkedin.com/in/amol-patil-010a90224/'">
+                            linkedin.com/in/amol-patil-010a90224
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="footer-fourth">
+                <ul>
+                    github<img src="git.png" alt="my Linkedin profile" class="icon"
+                        onclick="location.href='https://github.com/AMOL192002/'">:
+                    <a onclick="location.href='https://github.com/AMOL192002/'"">github.com/AMOL192002</a>
+                </ul>
+
+            </div>
+        </div>
+        <div class=" footer-rights">copyrights &#169;amol'sportfolio.com | All rights reserved
+            </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('hamburger').addEventListener('click', function () {
+                const navLinks = document.getElementById('nav-links');
+                navLinks.classList.toggle('active'); // Toggle the 'active' class
+            });
+    
+            // Your Typed.js code
+            var typed = new Typed('#element', {
+                strings: ['Java Full Stack Developer.', 'Front End Developer.', 'Back End Developer.'],
+                typeSpeed: 50,
+                backSpeed: 25,       // Speed at which the text is erased
+                backDelay: 1000,     // Delay before starting to erase the text
+                loop: true,          // Enable looping
+                showCursor: false,    // Show the cursor
+                cursorChar: '|',     // Change cursor character if needed
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
